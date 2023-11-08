@@ -1,4 +1,4 @@
-# Predict-Frogs-Presence-Using-Climate-
+# Predict-Frogs-Presence-Using-Climate-Data
 
 ## Problem description
 
