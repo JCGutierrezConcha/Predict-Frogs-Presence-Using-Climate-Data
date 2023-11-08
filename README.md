@@ -2,7 +2,7 @@
 
 ## Problem description
 
-This project is based in 2022 EY Open Science Data Challenge: Biodiversity.
+This project is based on 2022 EY Open Science Data Challenge: Biodiversity.
 
 I worked in novice level of the challenge. In this level the task was to build a computational model that can identify the occurrence of frogs for a single location using a single data source.
 
@@ -25,7 +25,11 @@ The dataset used in this project (`frogs_climate_data.csv`) was prepared using d
 - vpd (Vapor Pressure Deficit, average for month), units = kpa
 - pdsi (Palmer Drought Severity Index, at end of month), units = unitless
 
+For each feature, the mean was calculated in the period analyzed (1980-2019).
+That is why the suffix '_mean' was added to the name of each feature.
+
 The target variable is ocurrenceStatus.
+The presence of frogs is represented with a value = 1 and the absence with a value = 0.
 
 
 ## EDA
@@ -66,7 +70,7 @@ We trained and evaluated the models on the validation dataset.
 
 ## Select Best Model
 
-To choose the final model, we will train the tuned models with data from full train and evaluate their performance with test
+To choose the final model, we will train the tuned models with data from full train dataset and evaluate their performance with test dataset.
 
 We selected the model with high ROC_AUC score, which is Random Forest.
 
