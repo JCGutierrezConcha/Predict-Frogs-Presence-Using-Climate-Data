@@ -113,6 +113,6 @@ Then run  ```python predict-test.py```.
 
 ## Sample Output
 
-![Sample of the project running locally]()
+![Sample of the project running locally](https://github.com/JCGutierrezConcha/Predict-Frogs-Presence-Using-Climate-Data/blob/main/deploy_predict.PNG)
 
 
