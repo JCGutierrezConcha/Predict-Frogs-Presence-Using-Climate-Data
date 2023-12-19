@@ -79,13 +79,52 @@ We selected the model with high ROC_AUC score, which is Random Forest.
 
 The logic for training the best model is exported to a separate script named `train.py`.
 
+## Virtual Environment
 
-## Installation
+Virtual environment of the project is provided by files `Pipfile` and `Pipfile.lock`. These files contain all information about libraries and dependencies for the project.
 
-First of all clone this repo 
+To create a virtual environment with libraries and dependencies required for the project, one should first install `pipenv` library:  
+   
+```
+pip install pipenv
+```
+
+- Clone the project repository from GitHub.
+
 ```
 git clone https://github.com/JCGutierrezConcha/Predict-Frogs-Presence-Using-Climate-Data.git
 ```
+
+### Installation of virtual environment
+
+Run the following command to install virtual environment:   
+   
+```
+pipenv install
+```  
+
+Now you can run `train.py` file with a command
+
+```
+pipenv run python train.py
+```
+
+Files `predict.py` and `predict_test.py` may be run in a similar way.
+
+### Deploy web service
+
+To deploy web service run the command:
+
+```
+pipenv run waitress-serve --listen=localhost:9696 predict:app
+```
+
+### Usage app to predict
+
+Open a new terminal, be sure requests is installed. If is necessary use ```pip install requests```.
+
+Then run  ```python predict_test.py```.
+
 
 ## Run with Docker
 
@@ -108,7 +147,7 @@ docker run -it --rm -p 9696:9696 {build-tag}
 - -p 9696:9696 maps port 9696 on your host to port 9696 within the container.
 
 
-## Usage app to predict
+### Usage app to predict
 
 Open a new terminal, be sure requests is installed. If is necessary use ```pip install requests```.
 
