@@ -63,7 +63,7 @@ For Random Forest hyperparameters tuned included the number of estimators, maxim
 
 For Extra Trees hyperparameters tuned included number of estimators, maximum depth and min_samples_leaf.
 
--For XGBoost hyperparameters tuned included number of estimators, maximum depth and learning rate (eta).
+For XGBoost hyperparameters tuned included number of estimators, maximum depth and learning rate (eta).
 
 We trained and evaluated the models on the validation dataset.
 
@@ -72,7 +72,7 @@ We trained and evaluated the models on the validation dataset.
 
 To choose the final model, we will train the tuned models with data from full train dataset and evaluate their performance with test dataset.
 
-We selected the model with high ROC_AUC score, which is Random Forest.
+We selected the model with highest ROC_AUC score, which is Random Forest.
 
 
 ## Exporting notebook to script
